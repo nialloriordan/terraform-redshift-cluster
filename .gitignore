@@ -3,4 +3,7 @@
 terraform.tfstate*
 terraform.tfvars
 
+#config
+*.cfg
+
 __pycache__
