@@ -1,0 +1,23 @@
+# AWS provider
+aws_region  = "us-west-2"
+aws_profile = "udacity"
+
+# Create VPC
+vpc_cidr = "10.0.0.0/16"
+
+# redshift cluster
+rs_cluster_identifier  = <CLUSTER NAME>
+rs_nodetype            = "dc2.large"
+rs_cluster_type        = "single-node"
+rs_publicly_accessible = <PUBLIC ACCESS>
+
+# redshift database
+rs_database_name   = <DATABASE>
+rs_master_username = <USER>
+rs_master_password = <PASSWORD>
+rs_port            = 5439
+
+# permissions
+ip_permission_group_map = {
+  <UPDATE WITH IP AND PERMISSION i.e KEY = PERMISSION>
+}
