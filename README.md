@@ -7,6 +7,7 @@
   - [Overview](#overview)
     - [Terraform](#terraform)
       - [Quick Start](#quick-start)
+      - [Details](#details)
     - [Boto3](#boto3)
   - [Architecture](#architecture)
   - [Structure](#structure)
@@ -39,6 +40,16 @@ Run `terraform apply` to create the redshift cluster. Make sure to enter yes to 
 Finally to delete the cluster run `terraform destroy`. Make sure to enter yes to confim the deletion and to destroy any other related objects.
 
 </details>
+
+#### Details
+
+When you run `terraform apply` the following resources are being created:
+
+1. `aws_iam_role`: This is an IAM role that will be provided to Redshift to allow it to access other AWS resources
+2. `aws_iam_role_policy_attachment`: this will attach an s3 read access policy to the newly created IAM role. This will enable the redshift cluster to access S3 buckets.
+3. `aws_redshift_cluster`: The Amazon Redshift Cluster
+4. `aws_vpc`: An Amazon Virtual Private Cloud (VPC)
+5. `aws_default_security_group`: Opens a TCP connection within the VPC at the specified port. This will enable you to query the Redshift database at your provided IP address.
 
 ### Boto3
 
