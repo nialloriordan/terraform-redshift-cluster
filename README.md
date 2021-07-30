@@ -49,7 +49,7 @@ When you run `terraform apply` the following resources are being created:
 2. `aws_iam_role_policy_attachment`: this will attach an s3 read access policy to the newly created IAM role. This will enable the redshift cluster to access S3 buckets.
 3. `aws_redshift_cluster`: The Amazon Redshift Cluster
 4. `aws_vpc`: An Amazon Virtual Private Cloud (VPC)
-5. `aws_default_security_group`: Opens a TCP connection within the VPC at the specified port. This will enable you to query the Redshift database at your provided IP address.
+5. `aws_default_security_group`: Opens a TCP connection within the VPC at the specified port. This will enable you to query the Redshift database at your provided IP address
 
 ### Boto3
 
