@@ -1,6 +1,6 @@
 # AWS provider
 aws_region  = "us-west-2"
-aws_profile = "udacity"
+aws_profile = <AWS PROFILE e.g "default">
 
 # Create VPC
 vpc_cidr = "10.0.0.0/16"
