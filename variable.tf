@@ -46,16 +46,16 @@ variable "rs_nodetype" {
   type        = string
 }
 
-variable "rs_cluster_type" {
-  description = "Redshift node type"
-  type        = string
-  default     = "single-node"
-}
-
 variable "rs_port" {
   description = "Redshift database port"
   type        = number
   default     = 5439
+}
+
+variable "rs_number_of_nodes" {
+  description = "Redshift number of nodes"
+  type        = number
+  default     = 1
 }
 
 variable "rs_publicly_accessible" {

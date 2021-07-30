@@ -26,10 +26,12 @@ resource "aws_redshift_cluster" "default" {
   master_username     = var.rs_master_username
   master_password     = var.rs_master_password
   node_type           = var.rs_nodetype
-  cluster_type        = var.rs_cluster_type
+  number_of_nodes     = var.rs_number_of_nodes
+  cluster_type        = var.rs_number_of_nodes > 1 ? "multi-node" : "single-node"
   skip_final_snapshot = true
   iam_roles           = [aws_iam_role.redshift_role.arn]
   publicly_accessible = var.rs_publicly_accessible
+  port                = var.rs_port
 }
 
 resource "aws_vpc" "redshift_vpc" {

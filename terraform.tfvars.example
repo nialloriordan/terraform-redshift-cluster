@@ -8,7 +8,7 @@ vpc_cidr = "10.0.0.0/16"
 # redshift cluster
 rs_cluster_identifier  = <CLUSTER NAME>
 rs_nodetype            = "dc2.large"
-rs_cluster_type        = "single-node"
+rs_number_of_nodes     = 1
 rs_publicly_accessible = <PUBLIC ACCESS>
 
 # redshift database
